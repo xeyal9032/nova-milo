@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol Paneli</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <header>
+        <h1 id="welcomeMessage">Hoşgeldiniz</h1>
+        <button id="logoutBtn">Çıkış Yap</button>
+    </header>
+
+    <main>
+        <div class="welcome-card">
+            <h2>Sisteme Başarıyla Giriş Yaptınız!</h2>
+            <p>Burası sizin yeni kontrol paneliniz. İhtiyacınız olan her şeye buradan ulaşabilirsiniz.</p>
+            <p>Ekranın sağ alt köşesindeki <strong>Sanal Asistan</strong> ile sohbet edebilirsiniz.</p>
+        </div>
+    </main>
+
+    <!-- Sol Alttaki Robot Maskotu -->
+    <img src="robot.png" alt="Sanal Asistan Robot" class="robot-mascot" id="robotMascot">
+
+    <!-- Chatbot Paneli -->
+    <div class="chat-widget active" id="chatWidget">
+        <div class="chat-header">
+            <span><i class="fas fa-robot"></i> Asistan Bot</span>
+            <button id="minimizeChat"><i class="fas fa-chevron-down"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Mesajlar buraya eklenecek -->
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Bir mesaj yazın...">
+            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <!-- Chat Icon (küçültüldüğünde görünür) -->
+    <div class="chat-icon hidden" id="chatIcon">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

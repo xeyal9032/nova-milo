@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f4f7f6;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #2a4b9e;
+}
+
+#logoutBtn {
+    background: transparent;
+    border: 2px solid #2a4b9e;
+    color: #2a4b9e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#logoutBtn:hover {
+    background: #2a4b9e;
+    color: white;
+}
+
+.welcome-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.welcome-card h2 {
+    margin-bottom: 15px;
+    color: #4472e3;
+}
+
+.welcome-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Chatbot Stilleri */
+.chat-widget {
+    position: fixed;
+    bottom: -500px;
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+
+.chat-widget.active {
+    bottom: 30px;
+}
+
+.chat-header {
+    background: linear-gradient(90deg, #3b60c4, #2a4b9e);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f9f9f9;
+}
+
+.chat-message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.chat-message.bot {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-message.user {
+    background-color: #4472e3;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    align-items: center;
+}
+
+.chat-input-area input {
+    margin: 0;
+    border: none;
+    border-radius: 20px;
+    flex-grow: 1;
+    padding: 12px 15px;
+    background-color: #f0f2f5;
+    outline: none;
+}
+
+.chat-input-area button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #4472e3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input-area button:hover {
+    background-color: #2a4b9e;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(90deg, #3b60c4, #2a4b9e);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 999;
+}
+
+.chat-icon:hover {
+    transform: scale(1.1);
+}
+
+.chat-icon.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+/* Sol Alttaki Robot Maskotu */
+.robot-mascot {
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    height: 400px; /* Boyutu ayarlayabilirsiniz */
+    width: auto;
+    z-index: 50;
+    pointer-events: none; /* Tıklamaları engellemesin diye */
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}

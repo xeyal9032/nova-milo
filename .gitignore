@@ -1,0 +1,26 @@
+# Bağımlılıklar ve build
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/build/
+**/.turbo/
+
+# Ortam ve gizliler
+**/.env
+**/.env.local
+**/.env.development
+**/.env.production
+
+# Log ve OS
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Electron / Next cache
+**/.vercel/
+**/coverage/
