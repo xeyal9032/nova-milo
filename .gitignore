@@ -24,3 +24,7 @@ Thumbs.db
 # Electron / Next cache
 **/.vercel/
 **/coverage/
+
+# README medya (kaynak videolar)
+docs/assets/*.webm
+docs/assets/page@*

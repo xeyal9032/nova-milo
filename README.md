@@ -22,13 +22,13 @@
 
 ---
 
-## 🎬 Canlı Demo Hissi
+## 🎬 Canlı Demo
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3RqZ3N0aGJ0Z3B0Z3B0Z3B0/3o7abKhMDpvcCzxEk/giphy.gif" width="280" alt="AI animasyon"/>
-  <img src="docs/assets/robot.png" width="220" alt="Milo Robot"/>
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExLWRhc2hib2FyZC1hbmlt/26BRuo6sBn2qhq7YQ/giphy.gif" width="280" alt="Dashboard animasyon"/>
+  <img src="docs/assets/demo-preview.gif" alt="Nova Milo — giriş paneli ve dashboard geçişi" width="920"/>
 </p>
+
+<p align="center"><em>Giriş → kayıt paneli → dashboard → Milo sohbet (gerçek uygulama kaydı)</em></p>
 
 ---
 
@@ -97,33 +97,48 @@
 
 <div align="center">
 
-### Giriş Portalı
-<img src="docs/assets/login-robot.png" alt="Giriş ekranı maskotu" width="120" align="left" style="margin-right:20px"/>
-
-| | |
-|:---:|:---:|
-| <img src="https://img.shields.io/badge/Kayıt-Hesap_Oluştur-3b60c4?style=for-the-badge" /> | <img src="https://img.shields.io/badge/Giriş-Güvenli_OTP-2a4b9e?style=for-the-badge" /> |
-| Kaydırmalı overlay panel | Supabase Auth entegrasyonu |
-
-<br clear="left"/>
-
----
-
-### Sci-Fi Dashboard — Nova & Milo
+### 🔐 Giriş & Kayıt Portalı
 
 <table>
 <tr>
-<td align="center" width="50%">
-<strong>🤖 Milo — Sohbet Merkezi</strong><br/><br/>
-<img src="docs/assets/robot.png" width="320" alt="Milo Robot"/>
-<br/><br/>
-<em>Yüzen 3D maskot · Sesli asistan · Mikrofon desteği</em>
+<td width="50%" align="center">
+<strong>Giriş ekranı</strong><br/><br/>
+<img src="docs/assets/screenshot-login.png" alt="Giriş ekranı" width="100%"/>
 </td>
-<td align="center" width="50%">
-<strong>🛰️ Nova — Sistem HUD</strong><br/><br/>
-<img src="docs/assets/nova.png" width="200" alt="Nova HUD"/>
+<td width="50%" align="center">
+<strong>Kayıt paneli</strong><br/><br/>
+<img src="docs/assets/screenshot-register.png" alt="Kayıt ekranı" width="100%"/>
+</td>
+</tr>
+</table>
+
+<br/>
+
+### 🛸 Sci-Fi Dashboard — Nova & Milo
+
+<img src="docs/assets/screenshot-dashboard.png" alt="Nova Milo Dashboard — HUD, kripto, NASA, terminal" width="920"/>
+
 <br/><br/>
-<em>Hava · Kripto · NASA · Terminal · Ses radarı</em>
+
+### 💬 Milo AI Sohbet
+
+<img src="docs/assets/screenshot-dashboard-chat.png" alt="Milo sohbet paneli" width="720"/>
+
+<p><em>Gemini yanıtları · Markdown · Sesli okuma · Mikrofon girişi</em></p>
+
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="docs/assets/robot.png" width="140" alt="Milo maskot"/>
+<br/><strong>Milo</strong>
+</td>
+<td align="center" width="33%">
+<img src="docs/assets/nova.png" width="100" alt="Nova HUD"/>
+<br/><strong>Nova HUD</strong>
+</td>
+<td align="center" width="33%">
+<img src="docs/assets/login-robot.png" width="80" alt="Robot"/>
+<br/><strong>Maskot</strong>
 </td>
 </tr>
 </table>
@@ -232,8 +247,8 @@ npm run build:electron    # Windows kurulum paketi
 - [ ] Route koruması (`middleware` + oturum kontrolü)
 - [ ] `signOut` entegrasyonu
 - [ ] Şifre sıfırlama (Supabase)
-- [ ] API anahtarlarının tamamen env'e taşınması
-- [ ] Gerçek ekran görüntüsü GIF'leri
+- [x] API anahtarlarının env'e taşınması
+- [x] Gerçek ekran görüntüsü ve demo GIF
 
 ---
 
