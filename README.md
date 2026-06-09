@@ -16,9 +16,30 @@
 
 **Profesyonel giriş ekranı · Supabase kimlik doğrulama · Gemini destekli Milo asistan · Sci-fi kontrol paneli**
 
-[🚀 Kurulum](#-kurulum) · [✨ Özellikler](#-özellikler) · [📸 Önizleme](#-uygulama-önizlemesi) · [🛠️ Teknoloji](#️-teknoloji-yığını) · [👤 Geliştirici](https://github.com/xeyal9032)
+[💻 Windows İndir](#-windows-kurulum) · [🚀 Kurulum](#-kurulum) · [✨ Özellikler](#-özellikler) · [📸 Önizleme](#-uygulama-önizlemesi) · [👤 Geliştirici](https://github.com/xeyal9032)
+
+[![Windows İndir](https://img.shields.io/badge/Windows-Setup_İndir-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xeyal9032/nova-milo/releases/latest)
+[![Son Sürüm](https://img.shields.io/github/v/release/xeyal9032/nova-milo?style=for-the-badge&logo=github)](https://github.com/xeyal9032/nova-milo/releases/latest)
 
 </div>
+
+---
+
+## 💻 Windows Kurulum
+
+Kod bilmeden bilgisayarına kurmak için:
+
+1. **[Releases](https://github.com/xeyal9032/nova-milo/releases/latest)** sayfasını aç
+2. **`Nova Milo Desktop Setup 0.1.0.exe`** dosyasını indir (~164 MB)
+3. Çift tıkla → kurulum sihirbazını tamamla
+4. Başlat menüsünden **Nova Milo Desktop** uygulamasını aç
+
+| Gereksinim | |
+|------------|---|
+| İşletim sistemi | Windows 10/11 (64-bit) |
+| İnternet | Giriş, AI sohbet ve canlı veriler için gerekli |
+
+> Geliştiriciler için kaynak koddan kurulum aşağıdaki [Kurulum](#-kurulum) bölümünde.
 
 ---
 
@@ -221,11 +242,23 @@ npm run dev
 
 Tarayıcıda aç: **http://localhost:3000**
 
-### 5. Masaüstü uygulama (isteğe bağlı)
+### 5. Masaüstü uygulama
+
+**Kullanıcılar:** [Releases](https://github.com/xeyal9032/nova-milo/releases/latest) üzerinden `.exe` indirin.
+
+**Geliştiriciler:**
 
 ```bash
 npm run electron-dev      # Geliştirme
-npm run build:electron    # Windows kurulum paketi
+npm run build:electron    # Windows kurulum paketi → dist/
+```
+
+Yeni sürüm yayınlamak için `dist/*.exe` dosyasını GitHub Release'e yükleyin:
+
+```bash
+gh release create v0.2.0 --title "Nova Milo Desktop 0.2.0" \
+  --notes "Yenilikler..." \
+  "nextjs-app/dist/Nova Milo Desktop Setup 0.1.0.exe"
 ```
 
 ---
