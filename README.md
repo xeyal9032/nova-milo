@@ -18,8 +18,8 @@
 
 [💻 Windows İndir](#-windows-kurulum) · [🚀 Kurulum](#-kurulum) · [✨ Özellikler](#-özellikler) · [📸 Önizleme](#-uygulama-önizlemesi) · [👤 Geliştirici](https://github.com/xeyal9032)
 
-[![Windows İndir](https://img.shields.io/badge/Windows-Setup_İndir-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xeyal9032/nova-milo/releases/latest)
-[![Son Sürüm](https://img.shields.io/github/v/release/xeyal9032/nova-milo?style=for-the-badge&logo=github)](https://github.com/xeyal9032/nova-milo/releases/latest)
+[![Windows İndir](https://img.shields.io/badge/Windows-Setup_İndir-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/GovMateAi/nova-milo/releases/latest)
+[![Son Sürüm](https://img.shields.io/github/v/release/GovMateAi/nova-milo?style=for-the-badge&logo=github)](https://github.com/GovMateAi/nova-milo/releases/latest)
 
 </div>
 
@@ -29,7 +29,7 @@
 
 Kod bilmeden bilgisayarına kurmak için:
 
-1. **[Releases](https://github.com/xeyal9032/nova-milo/releases/latest)** sayfasını aç
+1. **[Releases](https://github.com/GovMateAi/nova-milo/releases/latest)** sayfasını aç
 2. **`Nova Milo Desktop Setup 0.2.0.exe`** dosyasını indir
 3. Çift tıkla → kurulum sihirbazını tamamla
 4. Başlat menüsünden **Nova Milo Desktop** uygulamasını aç
@@ -223,7 +223,7 @@ giris/
 ### 1. Depoyu klonla
 
 ```bash
-git clone https://github.com/xeyal9032/nova-milo.git
+git clone https://github.com/GovMateAi/nova-milo.git
 cd nova-milo/nextjs-app
 ```
 
@@ -254,7 +254,7 @@ Tarayıcıda aç: **http://localhost:3000**
 
 ### 5. Masaüstü uygulama
 
-**Kullanıcılar:** [Releases](https://github.com/xeyal9032/nova-milo/releases/latest) üzerinden `.exe` indirin.
+**Kullanıcılar:** [Releases](https://github.com/GovMateAi/nova-milo/releases/latest) üzerinden `.exe` indirin.
 
 **Geliştiriciler:**
 
