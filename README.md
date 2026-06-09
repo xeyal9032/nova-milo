@@ -39,6 +39,16 @@ Kod bilmeden bilgisayarına kurmak için:
 | İşletim sistemi | Windows 10/11 (64-bit) |
 | İnternet | Giriş, AI sohbet ve canlı veriler için gerekli |
 
+### İlk açılış (güvenli kurulum)
+
+EXE içinde **API anahtarı gömülü değildir**. İlk çalıştırmada **Kurulum** ekranı açılır:
+
+1. Supabase Project URL + Publishable Key
+2. Gemini API Key
+3. OpenAI API Key *(isteğe bağlı — Milo sesi)*
+
+Anahtarlar yalnızca `AppData` klasörünüzde saklanır.
+
 > Geliştiriciler için kaynak koddan kurulum aşağıdaki [Kurulum](#-kurulum) bölümünde.
 
 ---

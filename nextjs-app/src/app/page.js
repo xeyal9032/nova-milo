@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from '../components/LanguageSwitcher';
-import { supabase } from '../utils/supabaseClient';
+import { getSupabase } from '../utils/supabaseClient';
 import styles from './login.module.css';
 
 export default function Login() {
@@ -37,6 +37,7 @@ export default function Login() {
     submitBtn.disabled = true;
 
     try {
+      const supabase = await getSupabase();
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
@@ -84,6 +85,7 @@ export default function Login() {
     submitBtn.disabled = true;
 
     try {
+      const supabase = await getSupabase();
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password

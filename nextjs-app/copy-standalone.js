@@ -39,12 +39,7 @@ if (fs.existsSync(staticDir)) {
   copyRecursiveSync(staticDir, targetStaticDir);
 }
 
-// .env.local dosyasını da standalone'a kopyala
-const envFile = path.join(__dirname, '.env.local');
-const targetEnvFile = path.join(standaloneDir, '.env.local');
-if (fs.existsSync(envFile)) {
-    console.log(".env.local kopyalanıyor...");
-    fs.copyFileSync(envFile, targetEnvFile);
-}
+// GÜVENLİK: .env.local ASLA pakete kopyalanmaz.
+// Kullanıcı anahtarları ilk çalıştırmada /setup ekranından girer (Electron userData).
 
 console.log("Kopyalama tamamlandı!");

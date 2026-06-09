@@ -1,0 +1,120 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.mascot {
+  width: 80px;
+  margin-bottom: 12px;
+}
+
+.card h1 {
+  color: #2a4b9e;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 13px;
+  background: #f8f9fb;
+}
+
+.optional {
+  font-weight: 400;
+  color: #888;
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #3b60c4, #2a4b9e);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.message {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #eef3ff;
+  color: #2a4b9e;
+  font-size: 13px;
+}
+
+.help {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.help a {
+  color: #3b60c4;
+}
+
+.devNote {
+  text-align: left;
+  font-size: 13px;
+  color: #555;
+}
+
+.devNote pre {
+  background: #f0f2f5;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.devNote code {
+  font-size: 12px;
+}

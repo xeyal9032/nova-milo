@@ -1,5 +1,6 @@
 import './globals.css'
 import { LanguageProvider } from '../contexts/LanguageContext'
+import SetupGuard from '../components/SetupGuard'
 export const metadata = {
   title: 'Profesyonel Giriş Portalı',
   description: 'Next.js ile oluşturulmuş profesyonel giriş uygulaması',
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <LanguageProvider>
-          {children}
+          <SetupGuard>
+            {children}
+          </SetupGuard>
         </LanguageProvider>
       </body>
     </html>

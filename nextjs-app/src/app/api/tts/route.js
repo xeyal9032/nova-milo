@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getServerConfig } from '@/lib/serverConfig';
 
 export async function POST(req) {
   try {
@@ -8,7 +9,7 @@ export async function POST(req) {
       return NextResponse.json({ error: "Metin boş olamaz." }, { status: 400 });
     }
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const apiKey = getServerConfig().openaiApiKey;
     if (!apiKey) {
       return NextResponse.json(
         { error: 'OPENAI_API_KEY tanımlı değil.' },

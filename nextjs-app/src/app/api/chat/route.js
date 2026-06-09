@@ -1,12 +1,12 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextResponse } from 'next/server';
+import { getServerConfig } from '@/lib/serverConfig';
 
 export async function POST(req) {
   try {
     const { message, lang = 'tr' } = await req.json();
 
-    // API Anahtarı kontrolü
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = getServerConfig().geminiApiKey;
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Lütfen sunucuya bir GEMINI_API_KEY ekleyin.' },
@@ -36,7 +36,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("Gemini API Error:", error);
     return NextResponse.json(
-      { error: 'Hata detayı: ' + (error.message || error.toString()) + ' | Key var mı: ' + !!process.env.GEMINI_API_KEY },
+      { error: 'Hata detayı: ' + (error.message || error.toString()) },
       { status: 500 }
     );
   }
