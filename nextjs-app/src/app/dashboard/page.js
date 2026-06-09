@@ -300,9 +300,28 @@ function DashboardContent() {
     }
   };
 
+  const getSpeechLang = () => {
+    switch (lang) {
+      case 'en': return 'en-US';
+      case 'ru': return 'ru-RU';
+      case 'de': return 'de-DE';
+      case 'az': return 'az-AZ';
+      default: return 'tr-TR';
+    }
+  };
+
+  const speakWithBrowser = (cleanText) => {
+    if (!('speechSynthesis' in window)) return false;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.lang = getSpeechLang();
+    window.speechSynthesis.speak(utterance);
+    return true;
+  };
+
   const speakText = async (text, forcePlay = false) => {
     if (!isVoiceEnabled && !forcePlay) return;
-    
+
     const cleanText = text.replace(/[*#_`~>]/g, '').trim();
     if (!cleanText) return;
 
@@ -314,22 +333,23 @@ function DashboardContent() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Ses dosyası alınamadı");
+        // OpenAI anahtarı yoksa veya API hatası — tarayıcı TTS yedek
+        speakWithBrowser(cleanText);
+        return;
       }
 
       const audioBlob = await response.blob();
       const audioUrl = URL.createObjectURL(audioBlob);
       const audio = new Audio(audioUrl);
-      
+
       if (window.currentMiloAudio) {
         window.currentMiloAudio.pause();
       }
       window.currentMiloAudio = audio;
-      
-      audio.play();
-    } catch (error) {
-      console.error("OpenAI TTS Oynatma Hatası:", error);
+
+      audio.play().catch(() => speakWithBrowser(cleanText));
+    } catch {
+      speakWithBrowser(cleanText);
     }
   };
 

@@ -49,7 +49,13 @@ export default function Login() {
 
       if (error) throw error;
 
-      showMessage(t('registerSuccess', { name }));
+      if (data.session) {
+        const userName = data.user?.user_metadata?.name || email.split('@')[0];
+        e.target.reset();
+        router.push(`/dashboard?user=${encodeURIComponent(userName)}`);
+        return;
+      }
+      showMessage(t('registerSuccess', { name }) + ' E-posta onayı gerekiyorsa gelen kutunuzu kontrol edin.');
       e.target.reset();
       setIsRightPanelActive(false);
     } catch (error) {
@@ -89,7 +95,10 @@ export default function Login() {
       e.target.reset();
       router.push(`/dashboard?user=${encodeURIComponent(userName)}`);
     } catch (error) {
-      showMessage("Giriş Hatası: " + error.message);
+      const msg = error.message === 'Email not confirmed'
+        ? 'E-posta henüz onaylanmamış. Gelen kutunuzu kontrol edin veya Supabase\'de e-posta onayını kapatın.'
+        : error.message;
+      showMessage("Giriş Hatası: " + msg);
     } finally {
       submitBtn.innerText = originalText;
       submitBtn.disabled = false;
