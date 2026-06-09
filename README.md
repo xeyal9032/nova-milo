@@ -30,7 +30,7 @@
 Kod bilmeden bilgisayarına kurmak için:
 
 1. **[Releases](https://github.com/xeyal9032/nova-milo/releases/latest)** sayfasını aç
-2. **`Nova Milo Desktop Setup 0.1.0.exe`** dosyasını indir (~164 MB)
+2. **`Nova Milo Desktop Setup 0.2.0.exe`** dosyasını indir
 3. Çift tıkla → kurulum sihirbazını tamamla
 4. Başlat menüsünden **Nova Milo Desktop** uygulamasını aç
 
@@ -268,7 +268,7 @@ Yeni sürüm yayınlamak için `dist/*.exe` dosyasını GitHub Release'e yükley
 ```bash
 gh release create v0.2.0 --title "Nova Milo Desktop 0.2.0" \
   --notes "Yenilikler..." \
-  "nextjs-app/dist/Nova Milo Desktop Setup 0.1.0.exe"
+  "nextjs-app/dist/Nova Milo Desktop Setup 0.2.0.exe"
 ```
 
 ---
